@@ -8,6 +8,11 @@ var express = require('express');
 var app     = express();
 // assigning 3000 as our port
 
+var hbs = require('hbs');
+
+app.set("view engine", "hbs");
+app.set('views', './views');
+
 app.get('/topping', function(req, res, next) {
     
         res.send( "Welcome to the Pizza Express!");
@@ -33,4 +38,5 @@ app.listen(port, function(){
   console.log('LISTENING ON PORT ' + port);
   console.log("==========================")
 });
+
 
