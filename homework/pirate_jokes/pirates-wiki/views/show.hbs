@@ -1,11 +1,24 @@
-<h1>{{pirates.name}}</h1>
+<form action="/pirates" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="birthplace">birthplace:</label>
+        <input type="text" name="birthplace">
+    </div>
+    <div>
+        <label for="birthplace">birthplace:</label>
+        <input type="text" name="birthplace">
+    </div>
+    <div>
+        <label for="death_year">death_year:</label>
+        <input type="text" name="death_year">
+    </div>
+    <div>
+        <label for="nickname">nickname:</label>
+        <input type="text" name="nickname">
+    </div>
 
-<h1><b>Pirate Show Page</b></h1>
-
-<ul>
-    <li>Name: {{pirates.name}}</li>
-    <li>Birthplace: {{pirates.birthplace}}</li>
-    <li>Death Year: {{pirates.death_year}}</li>
-    <li>Base: {{pirates.base}}</li>
-    <li>Nickname: {{pirates.nickname}}</li>
-</ul>
+    <button>Submit</button>
+</form>

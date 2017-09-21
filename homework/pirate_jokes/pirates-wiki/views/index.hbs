@@ -1,11 +1,6 @@
 <p>Hello this is the page</p>
 {{#each pirates}}
-<li>{{this.name}}</li>
-<li>{{this.birthplace}}</li>
-<li>{{this.death_year}}</li>
-<li>{{this.base}}</li>
-<li>{{this.nickname}}</li>
-
+<a href="/pirates/{{@index}}"><li>{{this.name}}</li></a>
 {{/each}}
 
 <a href="/pirates/new"><button type="submit">Create a new pirate</button></a>
