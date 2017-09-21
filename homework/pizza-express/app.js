@@ -1,35 +1,31 @@
 // app.js
-
-//require express package
 var express = require('express');
-//save an express module as 'app'
-
-
 var app     = express();
-// assigning 3000 as our port
-
 var hbs = require('hbs');
+var router = express.Router();
+var port    = 3000;
+
+
 
 app.set("view engine", "hbs");
+
 app.set('views', './views');
 
 app.get('/topping', function(req, res, next) {
     
-        res.send( "Welcome to the Pizza Express!");
+        res.render( "Welcome to the Pizza Express!");
     });
 
 app.get('/topping/:pepperoni', function(req, res, next) {
         
-            res.send("pepperoni pizza! Good choice." );
+            res.render("pepperoni pizza! Good choice." );
         });    
 app.get('/order/:10/:medium', function(req, res, next) {
             
-             res.send("Your order for 10 medium pizzas will be ready in 1 minute!");
+             res.render("Your order for 10 medium pizzas will be ready in 1 minute!");
              });
 
-    //Make a GET route for /order that has 2 variable destinations (# of pizza, pizza size). 
-    //When a user visits this route on localhost:3000/order/10/medium, they will see "Your order for 10 medium pizzas will be ready in 1 minute!" 
-    //The syntax for the route will look like this:         
+    
 var port    = 3000;
 
 // tells the server to listen for requests on port 3000

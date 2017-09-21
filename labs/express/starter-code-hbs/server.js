@@ -7,12 +7,17 @@ var hbs         = require('hbs');
 var app         = express();
 var port        = process.env.PORT || 3000;
 /* set up the application params*/
-
+const todosController = require("./controllers/todos");
 // log
 app.use( logger('dev'));
 
 /*Views*/
 app.set('view engine', 'hbs');
+
+/* CONTROLLERS*/
+
+app.use("/todos", todosController);
+
 
 /* HOME */
 app.get('/', function(req,res) {
