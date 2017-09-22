@@ -75,7 +75,7 @@ module.exports = [
 	  name: 'Thomas Jones',
 	  birthplace: 'Ireland',
 	  death_year: 1713,
-    base: 'Rhode Island',
+    based: 'Rhode Island',
 	  nickname: "Major Thomas Jones"
 	},{
 	  name: 'William Dampier',
