@@ -1,21 +1,21 @@
-var express = require("express");
-var router = express.Router();
-var pirates = require('../pirates.js');
+const express = require("express");
+const router = express.Router();
+const pirates = require('../pirates.js');
 const bodyparser = require('body-parser');
 
-     /*INDEX*/
+/*INDEX*/
 router.get('/', (req, res) => {
     res.render('pirates/index',{
         pirates: pirates
     });   
 });
 
-       /*NEW*/
+/*NEW*/
 router.get('/new', (req, res) => {
     res.render('pirates/new')       
 }); 
 
-     /*SHOW DATA*/
+/*SHOW DATA*/
 router.get('/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const runpirate = pirates[id];
@@ -29,7 +29,8 @@ router.get('/:id', (req, res) => {
     }
   
 });
-          /*UPDATE*/
+
+/*UPDATE*/
 router.get('/:id/edit', (req, res) =>{
     res.render('pirates/edit', {
         runpirate: {
@@ -44,9 +45,9 @@ router.get('/:id/edit', (req, res) =>{
     })
 })
 
-        /*UPDATE EDIT DATA*/
+/*EDIT DATA*/
 router.put('/:id', function(req, res){
-    var editPirateInfo = pirates[req.params.id];
+    const editPirateInfo = pirates[req.params.id];
 
     editPirateInfo.name = req.body.name;
     editPirateInfo.birthplace = req.body.birthplace;
@@ -56,20 +57,20 @@ router.put('/:id', function(req, res){
     res.redirect('/pirates');
 })
 
-           /*DELETE*/
+/*DELETE*/
 router.delete('/:id', function(req, res){
     pirates.splice(parseInt(req.params.id),1);
     res.redirect('/pirates')
     
 })
-             /*POST*/
+
+/*POST*/
 router.post('/', (req, res)=>{
     console.log(req.body);
     const newPirates = req.body;
     pirates.push(newPirates);
     res.redirect('/pirates');           
-  
-  })
+});
 
-//exports
+/*EXPORTS*/
 module.exports = router;
