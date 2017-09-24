@@ -14,6 +14,7 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'hbs');
 app.use("/pirates", pirateController);
+app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', function(req,res) {
