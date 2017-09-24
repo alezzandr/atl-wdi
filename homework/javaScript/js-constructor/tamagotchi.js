@@ -14,9 +14,19 @@ cry() {
     console.log("WAAAH!!!!!!");
     console.log(this.name + ' has current food in tummy = ' + this.foodInTummy);
   };
+  puke() {
+    this.health--;
+    console.log('Bleeeeh! Sick!!!!!!');
+    console.log(this.name + ' has current health = ' + this.health);
+  };
+  yawn(){
+    this.restedness--;
+    console.log('Yaaaawwwwn! So tired');
+    console.log(this.name + ' has current restedness = ' + this.restedness);
+  };
   
 }
-//eate new Tamagotchis
+//creeate new Tamagotchis
 var bob = new Tamagotchi('bob', 'blah')
 bob.start();
 
