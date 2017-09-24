@@ -14,8 +14,9 @@ cry() {
     console.log("WAAAH!!!!!!");
     console.log(this.name + ' has current food in tummy = ' + this.foodInTummy);
   };
+  
 }
-//create new Tamagotchis
+//eate new Tamagotchis
 var bob = new Tamagotchi('bob', 'blah')
 bob.start();
 
