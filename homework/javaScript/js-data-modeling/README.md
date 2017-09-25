@@ -49,12 +49,9 @@ Write your answer here or in a separate js file.
 
 ```
 
-
-
 ### 2. Radio on the Internet app
 
 This app hosts a ton of radio stations, each featuring their own playlists of songs. The radio stations can be listed by genre or popularity.
-
 
 ```
 var radio_station = {
@@ -71,7 +68,8 @@ var radio_station = {
     country: String,
     genre: [],
     rating: Number
-}
+};
+
 ```
 
 ### 3. Rock Concert App
@@ -99,11 +97,14 @@ var nameBand = {
   ticketPrice: Number,
   vocalistName: String
 };
+
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
+
+```
 
 var findCoffeeshop = { 
   name: String, 
@@ -120,12 +121,15 @@ var findCoffeeshop = {
      quantity: Number,
      reviews: Number
      }
+     
+  ```
 
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
 ```
+
 var sortsTeam = {
   teamName: String,
   owner: String,
@@ -135,7 +139,6 @@ var sortsTeam = {
   raiting: Number
 
 }
-```
 
 
 var player = {
@@ -146,6 +149,8 @@ var player = {
   hometown: String,
 
 }
+
+```
 
 ### Final Thoughts:
 
