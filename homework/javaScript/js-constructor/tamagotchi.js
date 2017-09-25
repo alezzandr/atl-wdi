@@ -1,33 +1,65 @@
 console.log('tamagotchi file is loaded');
 
 //your class declaration here
-class Tamagotchies {
-    constructor(name, creatureType){
-    this.foodInTummy = 10;
-    this.restedness = 10;
-    this.health = 10;
-    this.name = name;
-    this.creatureType = creatureType;
-}
-cry() {
-    this.foodInTummy--;
-    console.log("WAAAH!!!!!!");
-    console.log(this.name + ' has current food in tummy = ' + this.foodInTummy);
-  };
-  puke() {
-    this.health--;
-    console.log('Bleeeeh! Sick!!!!!!');
-    console.log(this.name + ' has current health = ' + this.health);
-  };
-  yawn(){
-    this.restedness--;
-    console.log('Yaaaawwwwn! So tired');
-    console.log(this.name + ' has current restedness = ' + this.restedness);
-  };
-  
-}
-//creeate new Tamagotchis
-var bob = new Tamagotchi('bob', 'blah')
-bob.start();
+class watsupTamagotchi{
+    constructor(name, creatureType) {
+        this.name = name;
+        this.creatureType = creatureType;
+        this.foodInTummy = 10;
+        this.restedness = 10;
+        this.health = 10;
+    }
+
+    cry() {
+        this.foodInTummy--;
+        console.log("WAHH!!!");
+        console.log(this.name + "New value " + this.foodInTummy);
+    };
+
+    puke(){
+        this.health--;
+        console.log("Meow");
+        console.log("New value " + this.foodInTummy);
+    }
+    yawn(){
+        this.restedness--;
+        console.log(this.name + "has current restedness of" + this.restedness);
+        
+    }
+    start(){
+            console.log("Starting " + this.name);
+            var here = this;
+            this.hungerTimer = setInterval(()=>{
+                here.cry();
+            }, 6000)
+            this.yawnTimer = setInterval(() =>{
+                here.yawn();
+            }, 10000)
+            this.sickTimer = setInterval(() =>{
+                here.puke();
+            }, 20000)
+        };
+       stop(){
+           console.log("Stop" + this.name);
+           clearInterval(this.hungerTimer);
+           clearInterval(this.yawnTimer);
+           clearInterval(this.sickTimer);
+       }
+
+};  
+//create new Tamagotchis
+const constructorObj1 = new watsupTamagotchi();
+const constructorObj2 = new watsupTamagotchi("Bob");
+
+console.log(constructorObj1);
+console.log(constructorObj2);
+
+constructorObj1.cry();
+constructorObj2.yawn();
+
 
 //test out your Tamagotchies below via console.logs
+console.log(watsupTamagotchi);
+
+var Bob = new watsupTamagotchi("john");
+Bob.start();

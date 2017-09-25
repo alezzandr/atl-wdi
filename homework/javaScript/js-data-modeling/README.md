@@ -30,8 +30,26 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
+var my_email = {
+  email_id: String,
+  sender: String,
+  date: String,
+  time: Sring,
+  message: String,
+  
+};
+
+var sender = {
+  name: String,
+  email: String,
+  time : String,
+  message: String
+};
 Write your answer here or in a separate js file.
+
 ```
+
+
 
 ### 2. Radio on the Internet app
 
@@ -39,7 +57,21 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+var radio_station = {
+  id_station: Number,
+  name_station: String,
+  genre_station: [], 
+  language: String
+
+};
+
+var radio_station = {
+    id_station: Number,
+    name_station: String,
+    country: String,
+    genre: [],
+    rating: Number
+}
 ```
 
 ### 3. Rock Concert App
@@ -47,28 +79,81 @@ Write your answer here or in a separate js file.
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
 ```
-Write your answer here or in a separate js file.
+
+var listbands = {
+  nameBand: String,
+  genreBand: String,
+  idBand: Number,
+  countryBand: String,
+  tourDate: date,
+  ticketPrice: Number,
+  showName: String
+  
+};
+
+var nameBand = {
+  idBand: String,
+  nameBand: String,
+  tourDate: Date,
+  concertPlace: String,
+  ticketPrice: Number,
+  vocalistName: String
+};
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
 
+var findCoffeeshop = { 
+  name: String, 
+  distance: Number, 
+  openHours: String, 
+  price; Number,
+  drinkMenu: [],
+  } 
+  
+  var name = {
+     drinkName: String,
+     price: Number,
+     size: String, 
+     quantity: Number,
+     reviews: Number
+     }
+
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
 ```
-Write your answer here or in a separate js file.
+var sortsTeam = {
+  teamName: String,
+  owner: String,
+  teamBase: Name,
+  totalPlayers: Number,
+  totalGames: Number,
+  raiting: Number
+
+}
 ```
 
+
+var player = {
+  playerName: String,
+  playerDateOfBirth: Date,
+  playerHeight: Number,
+  playerWeight: Number
+  hometown: String,
+
+}
 
 ### Final Thoughts:
 
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
 
 ```
-Write your answer here or in a separate js file.
+ I'm trying to connect them using my logic, putting myself deeply possible in each situayion.
+
 ```
 
 ### Reading and Videos for Tomorrow
