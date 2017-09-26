@@ -45,7 +45,7 @@ var sender = {
   time : String,
   message: String
 };
-Write your answer here or in a separate js file.
+
 
 ```
 
