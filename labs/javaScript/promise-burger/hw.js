@@ -107,7 +107,7 @@ const order = customers.map(function(customer){
 });
 
 
-Promise.all(order).then(function(data){
+promise.all(order).then(function(data){
   console.log('All foods delieverd')
 }).catch(function(error){
   console.log(error)
