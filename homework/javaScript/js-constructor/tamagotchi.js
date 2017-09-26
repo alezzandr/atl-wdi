@@ -2,7 +2,7 @@ console.log('tamagotchi file is loaded');
 
 //your class declaration here
 class watsupTamagotchi{
-    constructor(name, creatureType) {
+    constructor(name, creatureType){
         this.name = name;
         this.creatureType = creatureType;
         this.foodInTummy = 10;
@@ -12,7 +12,7 @@ class watsupTamagotchi{
 
     cry() {
         this.foodInTummy--;
-        console.log("WAHH!!!");
+        console.log("WAHH!");
         console.log(this.name + "New value " + this.foodInTummy);
     };
 
@@ -48,18 +48,18 @@ class watsupTamagotchi{
 
 };  
 //create new Tamagotchis
-const constructorObj1 = new watsupTamagotchi();
-const constructorObj2 = new watsupTamagotchi("Bob");
+var buildTom1 = new watsupTamagotchi();
+var buildTom2 = new watsupTamagotchi("alex");
 
-console.log(constructorObj1);
-console.log(constructorObj2);
+console.log(buildTom1);
+console.log(buildTom2);
 
-constructorObj1.cry();
-constructorObj2.yawn();
+buildTom1.cry();
+buildTom2.puke();
 
 
 //test out your Tamagotchies below via console.logs
 console.log(watsupTamagotchi);
 
-var Bob = new watsupTamagotchi("john");
-Bob.start();
+var alex = new watsupTamagotchi("alex");
+alex.start();
